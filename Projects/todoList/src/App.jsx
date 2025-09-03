@@ -50,6 +50,7 @@ function App() {
           </div>
           <div className="flex flex-wrap gap-y-3">
             <ToDoItem />
+            {todos.map((todo))}
           </div>
         </div>
       </div>
