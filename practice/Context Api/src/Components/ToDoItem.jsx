@@ -1,19 +1,7 @@
-import React, { useState } from 'react'
-import { useToDo } from '../Context';
+import React from 'react'
 
 function ToDoItem({ todo }) {
-    const { updateTodo, deleteTodo, toggleCompleate } = useToDo();
-    const [isTodoEditable, setIsTodoEditable] = useState(false);
-    const [todoMsg, setTodoMsg] = useState(todo.title);
 
-    const editTodo = () => {
-        updateTodo(todo.id, { ...todo, title: todoMsg })
-        setIsTodoEditable(false);
-    }
-
-    const toggleCompleated = () => {
-        toggleCompleate(todo.id)
-    }
 
     return (
         <div
@@ -24,7 +12,7 @@ function ToDoItem({ todo }) {
                 type="checkbox"
                 className="cursor-pointer"
                 checked={todo.completed}
-                onChange={toggleCompleated}
+                onChange={toggleCompleted}
             />
             <input
                 type="text"
@@ -59,4 +47,5 @@ function ToDoItem({ todo }) {
     );
 }
 
-export default ToDoItem;
+
+export default ToDoItem
