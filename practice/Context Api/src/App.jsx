@@ -6,7 +6,7 @@ function App() {
   const [toDos, setToDos] = useState([]);
   const addToDo = (toDo) => {
     setToDos((prevToDo) => [...prevToDo, {
-      id: crypto.randomUUID(), ...toDo
+      id: Date.now(), ...toDo
     }
     ])
 

@@ -15,7 +15,7 @@ function UserInput({ guestName, setGuestName }) {
     const newGuest = [
       ...guestName, {
         Name: inputName,
-        id: crypto.randomUUID()
+        id: Date.now()
       }
     ]
 
@@ -92,7 +92,7 @@ function ShowGuestList({ guestName, setGuestName }) {
 
 
 function App() {
-  const [guestName, setGuestName] = React.useState([{ Name: 'Ayan koley', id: crypto.randomUUID() }]);
+  const [guestName, setGuestName] = React.useState([{ Name: 'Ayan koley', id: Date.now() }]);
 
   return (
     <>
